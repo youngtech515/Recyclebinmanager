@@ -1,0 +1,33 @@
+<section class="recovery-table">
+  {{#if records.length}}
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="selectAll"></th>
+          <th>File Name</th>
+          <th>User</th>
+          <th>Deleted On</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="recoveryTableBody">
+        {{#each records}}
+          <tr>
+            <td><input type="checkbox" class="select-item" data-id="{{id}}"></td>
+            <td>{{fileName}}</td>
+            <td>{{user}}</td>
+            <td>{{deletedOn}}</td>
+            <td>{{fileType}}</td>
+            <td>
+              <button class="restore-btn" data-id="{{id}}">Restore</button>
+              <button class="delete-btn" data-id="{{id}}">Delete</button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="no-data">No deleted items available for recovery.</p>
+  {{/if}}
+</section>

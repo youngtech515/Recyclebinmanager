@@ -1,0 +1,53 @@
+<div class="recovery-container">
+
+  <!-- 🔍 Filter Section -->
+  <section class="recovery-filters">
+    <form id="recoveryFilterForm">
+      <div class="filter-row">
+        <div>
+          <label>From Date:</label>
+          <input type="date" name="fromDate" value="{{fromDate}}">
+        </div>
+        <div>
+          <label>To Date:</label>
+          <input type="date" name="toDate" value="{{toDate}}">
+        </div>
+        <div>
+          <label>User:</label>
+          <select name="user">
+            <option value="">All</option>
+            {{#each users}}
+              <option value="{{this}}" {{#ifEquals ../selectedUser this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="btn-primary">Apply</button>
+          <button type="button" id="resetFilters" class="btn-secondary">Reset</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- 🔍 Search -->
+  <div class="search-bar">
+    <input id="searchInput" type="text" placeholder="Search deleted files..." />
+  </div>
+
+  <!-- ♻️ Bulk Action Buttons -->
+  {{> recoveryActions }}
+
+  <!-- 📋 Recovery Table -->
+  {{> recoveryTable records=records }}
+
+  <!-- 🪄 Confirmation Modal -->
+  <div id="confirmModal" class="modal hidden">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+      <div class="modal-buttons">
+        <button id="confirmAction" class="btn-primary">Yes</button>
+        <button id="cancelAction" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
