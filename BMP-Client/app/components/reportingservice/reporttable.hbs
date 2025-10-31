@@ -1,0 +1,30 @@
+<section class="report-table">
+  {{#if records.length}}
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>File Name</th>
+          <th>User</th>
+          <th>Action</th>
+          <th>Deleted On</th>
+          <th>Restored On</th>
+        </tr>
+      </thead>
+      <tbody id="reportTableBody">
+        {{#each records}}
+          <tr>
+            <td>{{@index}}</td>
+            <td>{{fileName}}</td>
+            <td>{{user}}</td>
+            <td class="{{actionType}}">{{actionType}}</td>
+            <td>{{deletedOn}}</td>
+            <td>{{restoredOn}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="no-data">No records found for the selected filters.</p>
+  {{/if}}
+</section>
