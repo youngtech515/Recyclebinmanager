@@ -1,0 +1,13 @@
+<h3>Create Account</h3>
+{{#if message}}<p class="msg">{{message}}</p>{{/if}}
+
+<form id="signupForm" action="/signup" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" required>
+  <label>Email:</label>
+  <input type="email" name="email" required>
+  <label>Password:</label>
+  <input type="password" name="password" required minlength="6">
+  <button type="submit">Signup</button>
+</form>
+<p>Already have an account? <a href="/login">Login</a></p>

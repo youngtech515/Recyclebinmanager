@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Demo</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h2>Auth Demo</h2>
+    {{#if user}}
+      <nav>
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/logout">Logout</a>
+      </nav>
+    {{else}}
+      <nav>
+        <a href="/login">Login</a> |
+        <a href="/signup">Signup</a>
+      </nav>
+    {{/if}}
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
