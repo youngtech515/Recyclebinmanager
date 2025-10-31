@@ -1,0 +1,23 @@
+<div class="app-container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2 class="sidebar-title">RecycleBin Tool</h2>
+    <ul class="nav-links">
+      <li>{{#link-to "index"}}🏠 Home{{/link-to}}</li>
+      <li>{{#link-to "recyclebin"}}🗑 View Deleted Files{{/link-to}}</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+      <h1 class="app-title">Recycle Bin Monitoring and Reporting</h1>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+      {{outlet}}
+    </div>
+  </div>
+</div>

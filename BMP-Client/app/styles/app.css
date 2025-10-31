@@ -1,0 +1,154 @@
+/* === GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Full App Layout */
+  .app-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  /* === SIDEBAR === */
+  .sidebar {
+    width: 260px;
+    background: #1e1e2f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 12px 15px;
+    display: block;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background: #3498db;
+    text-decoration: none;
+  }
+  
+  /* === MAIN CONTENT === */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+  }
+  
+  /* === TOP NAVIGATION BAR === */
+  .top-nav {
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* === PAGE CONTENT === */
+  .content {
+    padding: 30px;
+  }
+  
+  /* === HOME PAGE === */
+  .home-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 60px auto;
+  }
+  
+  .home-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .home-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 25px;
+  }
+  
+  .action-btn a {
+    background: #28a745;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  
+  .action-btn a:hover {
+    background: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* === RESPONSIVE DESIGN === */
+  @media (max-width: 768px) {
+    .app-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      padding: 10px 15px;
+    }
+  
+    .top-nav {
+      padding: 10px;
+    }
+  
+    .home-container {
+      padding: 30px;
+      max-width: 90%;
+    }
+  }
+  
